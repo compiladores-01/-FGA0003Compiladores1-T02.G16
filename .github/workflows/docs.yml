@@ -1,4 +1,4 @@
-name: Publicar documentação
+name: Publicar documentacao
 
 on:
   push:
@@ -18,20 +18,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar código
+      - name: Baixar codigo
         uses: actions/checkout@v4
+
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
       - name: Instalar MkDocs
         run: pip install -r docs/requirements.txt
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
+
       - name: Construir site
         run: mkdocs build --strict
+
       - name: Preparar Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site
 

@@ -23,3 +23,12 @@
 .md-tabs {
   background-color: var(--md-primary-fg-color);
 }
+
+.team-avatar {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  background: #e8eef5;
+  vertical-align: middle;
+}

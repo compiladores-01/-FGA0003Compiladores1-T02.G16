@@ -1,8 +1,9 @@
 ﻿site_name: COMP1
 site_description: Documentação do projeto de Compiladores 1 — Universidade de Brasília
 site_author: Equipe COMP1 · UnB
-repo_name: manoelmoura/COMP1
-repo_url: https://github.com/manoelmoura/COMP1
+site_url: https://fernandavazgit1.github.io/-FGA0003Compiladores1-T02.G16/
+repo_name: Fernandavazgit1/-FGA0003Compiladores1-T02.G16
+repo_url: https://github.com/Fernandavazgit1/-FGA0003Compiladores1-T02.G16
 edit_uri: edit/main/docs/
 copyright: Universidade de Brasília (UnB) · Compiladores 1
 
@@ -76,7 +77,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/manoelmoura/COMP1
+      link: https://github.com/Fernandavazgit1/-FGA0003Compiladores1-T02.G16
     - icon: fontawesome/solid/globe
       link: https://www.unb.br/
 
