@@ -1,3 +1,5 @@
+![](docs/assets/ptoc.jpg)
+
 ## Introdução
 
 Bem-vindo ao repositório do projeto de **Compiladores 1** da Universidade de Brasília.
