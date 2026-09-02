@@ -1,9 +1,6 @@
 # Planejamento das Sprints
 
-Sprints de **~2 semanas**, alinhadas ao cronograma da disciplina e às entregas **P1**, **P2** e **T**. Equipe de **4 pessoas**; compilador **Python → JavaScript**.
-
-!!! tip "Regra de ouro"
-    Cada sprint termina com: código compilando + pelo menos 1 exemplo `.py → .js` + docs atualizadas.
+Sprints de **~2 semanas**, alinhadas ao cronograma da disciplina e às entregas **P1**, **P2** e **T**. Equipe de **4 pessoas**; compilador **Python → C**.
 
 ---
 
@@ -16,7 +13,7 @@ Sprints de **~2 semanas**, alinhadas ao cronograma da disciplina e às entregas 
 | **S2** | 03/09 – 16/09 | Erros, AST e tabela de símbolos | Front-end pronto para P1 |
 | **S3** | 17/09 – 30/09 | Consolidação e **P1** | Demo P1 |
 | **S4** | 01/10 – 14/10 | Semântica + IR | Análise semântica integrada |
-| **S5** | 15/10 – 28/10 | Otimização + codegen JS | Protótipo `.js` |
+| **S5** | 15/10 – 28/10 | Otimização + codegen C | Protótipo `.c` |
 | **S6** | 29/10 – 11/11 | Integração e **P2** | Demo P2 |
 | **S7** | 12/11 – 25/11 | Fechamento | Compilador final |
 | **S8** | 26/11 – 02/12 | Entrevista **T** | Entrega |
@@ -32,7 +29,7 @@ Sprints de **~2 semanas**, alinhadas ao cronograma da disciplina e às entregas 
 | Líder | Criar board/issues; confirmar líder e formulários futuros |
 | Léxico | Listar tokens da subset Python v0 |
 | Sintaxe | Rascunho da gramática (atribuição, expr, `if`, `while`, `print`) |
-| Backend | Definir mapeamento preliminar Python → JS (`print`→`console.log`, etc.) |
+| Backend | Definir mapeamento preliminar Python → C (`print`→`printf`, etc.) |
 
 **DoD:** Flex/Bison instalados; repositório e MkDocs no ar; subset v0 escrita em [Especificação](../Projeto_Final/Especificacao_do_projeto.md).
 
@@ -98,18 +95,18 @@ Checklist P1:
 
 ---
 
-## Sprint 5 — Otimização e JavaScript (15/10 – 28/10)
+## Sprint 5 — Otimização e C (15/10 – 28/10)
 
-**Objetivo:** emitir JS executável.
+**Objetivo:** emitir C compilável.
 
 | Frente | Entregáveis |
 | --- | --- |
 | Otimização | Pelo menos uma: constant folding ou remoção de código morto trivial |
-| Codegen | Emissor JS (`let`/`const`, `if`, `while`, `function`, `console.log`) |
-| Integração | Comando: `./compilador entrada.py -o saida.js && node saida.js` |
-| Docs | Registrar decisões de mapeamento Python→JS |
+| Codegen | Emissor C (declarações, `if`, `while`, funções, `printf`) |
+| Integração | Comando: `./compilador entrada.py -o saida.c && gcc saida.c -o saida` |
+| Docs | Registrar decisões de mapeamento Python→C |
 
-**DoD:** pelo menos 3 exemplos `.py` geram `.js` que rodam no Node com saída correta.
+**DoD:** pelo menos 3 exemplos `.py` geram `.c` que compilam no GCC e produzem a saída correta.
 
 ---
 
@@ -120,7 +117,7 @@ Checklist P1:
 Checklist P2:
 
 - [ ] Formulário enviado pelo líder até **04/11/2026 23h59**
-- [ ] Pipeline: léxico → sintático → semântico → (IR/opt) → JS
+- [ ] Pipeline: léxico → sintático → semântico → (IR/opt) → C
 - [ ] Limitações da subset explícitas na documentação
 - [ ] Ensaio da entrevista (perguntas técnicas cruzadas entre membros)
 
@@ -146,24 +143,12 @@ Checklist P2:
 
 Roteiro sugerido (≈ 4 pessoas):
 
-1. Visão geral e subset Python → JS  
+1. Visão geral e subconjunto Python → C
 2. Front-end (lexer/parser/AST)  
 3. Semântica / IR / otimizações  
-4. Geração de JavaScript + demo ao vivo  
+4. Geração de C + demo ao vivo
 
 Presença de **todos** obrigatória.
 
 ---
 
-## Capacidade semanal (4 pessoas)
-
-Estimativa de esforço sustentável:
-
-| Atividade | Horas / pessoa / semana |
-| --- | --- |
-| Aulas | ~4 h |
-| Implementação + testes | ~4–6 h |
-| Docs / reuniões | ~1–2 h |
-| **Total** | **~9–12 h** |
-
-Se uma frente atrasar, o líder redistribui tarefas na quarta seguinte — priorizando sempre o próximo milestone (P1 → P2 → T).

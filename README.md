@@ -1,182 +1,108 @@
-# COMP1 – FGA0003
+## Introdução
 
-Disciplina de *Compiladores 1* do curso de Engenharia de Software da **Universidade de Brasília (UnB)**.
+Bem-vindo ao repositório do projeto de **Compiladores 1** da Universidade de Brasília.
 
-Este repositório contém exemplos de código usando **Flex** e **Bison** (exclusivamente), guias de estudo, tutoriais sobre compiladores e interpretadores, além de materiais de referência (glossários, instruções de configuração e roteiros de projeto). O conteúdo está organizado em pastas por semana, cada uma contendo (quando aplicável):
+O projeto aborda os fundamentos e os mecanismos envolvidos na construção de compiladores: análise léxica, análise sintática, representação intermediária, análise semântica e geração de código. Como aplicação prática, a equipe desenvolve um compilador de um subconjunto de `Python` para `C`, utilizando **Flex** e **Bison**.
 
-- Uma pasta **docs**, com guias e materiais de leitura.  
-- Uma pasta **src**, com exemplos de código `.l` (Flex), `.y` (Bison) e demais arquivos necessários para as práticas.
 
----
 
-## Estrutura do repositório
+## Como Executar
 
-```
-.
-├── LICENSE
-├── README.md
-├── listadir.txt
-├── semana 01
-│   ├── docs
-│   │   ├── Glossário de termos.md
-│   │   ├── Guia - Configuração do ambiente de desenvolvimento.md
-│   │   ├── Guia - Projeto de um compilador.md
-│   │   ├── Guia - Projeto de um interpretador.md
-│   │   └── Trabalho de Compiladores.md
-│   └── src
-│       ├── hello.README.md
-│       ├── hello.l
-│       └── hello.y
-├── semana 02
-│   ├── docs
-│   │   └── Guia - Expressões regulares no flex.md
-│   └── src
-│       ├── Makefile
-│       ├── entrada.txt
-│       ├── exemplo.README.md
-│       ├── exemplo.l
-│       └── exemplo.y
-├── semana 03
-│   └── src
-│       └── scanner.l
-├── semana 04
-│   └── src
-│       ├── Makefile
-│       ├── README.md
-│       ├── parser.y
-│       └── scanner.l
-├── semana 05
-│   └── src
-│       ├── Makefile
-│       ├── README.md
-│       ├── parser.y
-│       └── scanner.l
-└── semana 06
-    └── src
-        ├── Makefile
-        ├── README.md
-        ├── ast.c
-        ├── ast.h
-        ├── lexer.l
-        ├── parser.y
-        ├── tabela.c
-        ├── tabela.h
-        └── tipos.h
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/Fernandavazgit1/-FGA0003Compiladores1-T02.G16.git
+cd -FGA0003Compiladores1-T02.G16
 ```
 
-### Descrição das pastas
+### 2. Instalar dependências
 
-- **semana 01**  
-  - **docs**:  
-    - *Glossário de termos.md*: definições importantes de compiladores e ferramentas.  
-    - *Guia - Configuração do ambiente de desenvolvimento.md*: instruções para instalar Flex, Bison e compiladores C/C++.  
-    - *Guia - Projeto de um compilador.md* e *Guia - Projeto de um interpretador.md*: conceitos sobre fases de análise léxica, análise sintática, geração de código etc.  
-    - *Trabalho de Compiladores.md*: detalha a proposta geral (uso de PBL, equipes, entregas P1 e P2, entrevista final).  
-  - **src**:  
-    - *hello.l* / *hello.y*: exemplo mínimo que reconhece e imprime “Hello, World!” (Flex e Bison).  
-    - *hello.README.md*: explica como compilar e executar o exemplo “hello”.
+É necessário ter **Flex**, **Bison** e **GCC** instalados.
 
-- **semana 02**  
-  - **docs**:  
-    - *Guia - Expressões regulares no flex.md*: apresenta as ERs mais usadas para tokens no Flex.  
-  - **src**:  
-    - *exemplo.l / exemplo.y*: analisador que reconhece números e operadores simples, demonstrando boas práticas em Flex/Bison.  
-    - *entrada.txt*: arquivo de teste.  
-    - *Makefile*: automação de compilação (gera o binário `parser`).  
-    - *exemplo.README.md*: instruções para compilar e executar o “exemplo”.
+Em distribuições Linux baseadas em Debian/Ubuntu:
 
-- **semana 03**  
-  - **src**:  
-    - *scanner.l*: projeto inicial do compilador focado em **fase léxica** (tokens principais), conforme aula prática.
+```bash
+sudo apt-get update
+sudo apt-get install flex bison build-essential
+```
 
-- **semana 04**  
-  - **src**:  
-    - *Makefile*, *parser.y*, *scanner.l*: **implementação inicial do parser**, integrando com o scanner para reconhecer construções básicas.  
-    - *README.md*: instruções desta semana, explicando compilação e testes.
+No Windows, recomenda-se utilizar **WSL2** ou **MSYS2 MinGW64**.
 
-- **semana 05**  
-  - **src**:  
-    - *Makefile*, *parser.y*, *scanner.l*: **continuação do parser** com tratamento de erros sintáticos (descartar tokens até certo símbolo, ex. `;`).  
-    - *README.md*: descreve tarefas práticas e possíveis adaptações ao projeto.
+### 3. Gerar os arquivos do compilador
 
-- **semana 06**  
-  - **src**:  
-    - *lexer.l*, *parser.y*: versão mais avançada, incluindo análise semântica, manipulação de AST, tabelas de símbolos, tipos, etc.  
-    - *ast.c, ast.h*: estruturas e funções para a árvore sintática abstrata.  
-    - *tabela.c, tabela.h, tipos.h*: gerenciamento de símbolos e tipagem.  
-    - *Makefile*, *README.md*: automação e documentação final do compilador.
+Na raiz do projeto, execute:
 
----
+```bash
+bison -d parser/parser.y -o parser.tab.c
+flex -o lex.yy.c lexer/lexer.l
+```
 
-## Como usar
+Esses comandos geram `parser.tab.c`, `parser.tab.h` e `lex.yy.c`.
 
-1. **Clonar o repositório**
-   ```bash
-   git clone https://github.com/sergioaafreitas/COMP1.git
-   cd COMP1
-   ```
+### 4. Compilar o compilador
 
-2. **Instalar dependências**
-   - É necessário ter **Flex** e **Bison** instalados no sistema.  
-   - Em distribuições Linux baseadas em Debian/Ubuntu:
-     ```bash
-     sudo apt-get update
-     sudo apt-get install flex bison
-     ```
-   - Em outras plataformas, consulte a documentação.
+```bash
+gcc parser.tab.c lex.yy.c -o compilador
+```
 
-3. **Explorar os exemplos**
-   - **Semana 01**:
-     - Entre em `semana 01/src`.
-     - Revise o material em `semana 01/docs`.
-     - Para compilar “hello” manualmente:
-       ```bash
-       bison -d hello.y
-       flex hello.l
-       gcc -o hello hello.tab.c lex.yy.c -lfl
-       ./hello
-       ```
-   - **Semana 02**:
-     - Em `semana 02/src`, rode:
-       ```bash
-       make
-       ./parser entrada.txt
-       ```
-       ou `./parser` e digite valores manualmente.
-     - Consulte o arquivo `semana 02/docs/Guia - Expressões regulares no flex.md`.
+No Windows com MSYS2, o comando equivalente pode ser executado no terminal MinGW64:
 
-4. **Consultar guias e glossários**
-   - Cada pasta **docs** possui materiais de referência para instalação, expressões regulares, e roteiros de construção do compilador/interpretador.
-   - Novos conteúdos surgirão em semanas posteriores (análise semântica, geração de código etc.).
+```bash
+gcc parser.tab.c lex.yy.c -o compilador.exe
+```
 
----
+### 5. Executar
 
-## Contribuindo
+O compilador recebe a entrada pela entrada padrão:
 
-1. Faça um *fork* do repositório.
-2. Crie uma *branch* para suas alterações:
-   ```bash
-   git checkout -b minha-feature
-   ```
-3. Faça *commit* e envie um *pull request*.
+```bash
+echo "1 + 2" | ./compilador
+```
 
----
+Também é possível usar um arquivo:
 
-## Licença
+```bash
+./compilador < entrada.py
+```
 
-Este projeto está licenciado sob os termos da [Licença MIT](LICENSE).  
-Se usar ou distribuir o código, **cite** o repositório original e mantenha os avisos de copyright.
+No Windows:
 
----
+```bash
+Get-Content entrada.py | .\compilador.exe
+```
 
-## Contato
+## Estado Atual
 
-- **Professor**: *Sergio A. A. Freitas*  
-- **E-mail**: *sergiofreitas@unb.br*  
-- [Universidade de Brasília (UnB)](https://www.unb.br/) – [FCTE](https://fcte.unb.br/) – [CEDIS](https://cedis.unb.br)
+O protótipo atual reconhece expressões aritméticas com:
 
-Em caso de dúvidas, sugestões ou problemas, abra uma *issue* ou envie um e-mail diretamente.
+- números inteiros;
+- operadores `+`, `-`, `*` e `/`;
+- parênteses;
+- tratamento básico de caracteres inválidos;
+- análise sintática realizada pelo Bison.
 
----
+As próximas etapas ampliam o subconjunto de Python com variáveis, estruturas de controle, funções, análise semântica e geração de código C.
 
-**Bom estudo e boas práticas no desenvolvimento de compiladores!**
+
+
+## Pipeline do Compilador
+
+```text
+programa.py -> Flex -> tokens -> Bison -> AST -> análise semântica -> código C
+```
+
+## Melhorias Planejadas
+
+- ampliar o conjunto de tokens reconhecidos;
+- implementar variáveis e atribuições;
+- adicionar estruturas `if`, `else` e `while`;
+- construir e percorrer a AST;
+- implementar tabela de símbolos e checagens semânticas;
+- gerar arquivos `.c` a partir da AST ou de uma representação intermediária;
+- adicionar testes automatizados;
+- documentar decisões técnicas, problemas e soluções.
+
+## Organização da Equipe
+
+As atividades são organizadas em sprints, com acompanhamento no GitHub e na documentação do projeto. As páginas de planejamento, atas, atividades semanais e decisões técnicas estão disponíveis no site MkDocs.
+![Logo do Projeto](C:\Users\euoid\Documents\compiladores\-FGA0003Compiladores1-T02.G16\docs\assets\ptoc.jpg)

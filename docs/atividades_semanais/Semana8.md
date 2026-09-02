@@ -32,11 +32,11 @@ make
 ./run_tests.sh
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
 - [ ] Definir IR da equipe (TAC ou lista de instruções equivalente)
 - [ ] Emitir IR a partir da AST de programas Python da subset
-- [ ] Planejar o passo seguinte: IR → JavaScript
+- [ ] Planejar o passo seguinte: IR → C
 
 ## Observações da equipe
 

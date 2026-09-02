@@ -6,7 +6,7 @@ Especificação da equipe com base na **Proposta de Trabalho – Compiladores 1*
 | --- | --- |
 | **Tipo de projeto** | Compilador |
 | **Linguagem-fonte** | Subconjunto de **Python** |
-| **Linguagem-alvo** | **JavaScript** |
+| **Linguagem-alvo** | **C** |
 | **Ferramentas** | **Flex** (léxico) + **Bison** (sintático) + C |
 | **Equipe** | 4 membros (limite da disciplina: até 5) |
 | **Metodologia** | PBL + Scrum (sprints) |
@@ -16,7 +16,7 @@ Especificação da equipe com base na **Proposta de Trabalho – Compiladores 1*
 
 ## 1. Objetivo do trabalho
 
-Desenvolver, ao longo do semestre, um **compilador** que traduza programas de um subconjunto de Python para JavaScript, aplicando os conceitos de:
+Desenvolver, ao longo do semestre, um **compilador** que traduza programas de um subconjunto de Python para C, aplicando os conceitos de:
 
 - análise léxica e sintática;
 - estruturas internas (AST, tabela de símbolos);
@@ -30,7 +30,7 @@ O trabalho cobre **planejamento, projeto, implementação, testes e documentaç�
 ## 2. Formação da equipe e organização
 
 - Equipe de **4 estudantes** (dentro do limite de até 5).
-- Projeto definido cedo: **compilador Python → JavaScript** (não interpretador).
+- Projeto definido cedo: **compilador Python → C** (não interpretador).
 - Organização recomendada: **Scrum** com sprints (detalhes em [Planejamento das Sprints](../planejamento/planejamento_das_sprints.md)).
 - Guias de referência (semana 01 do GitHub da disciplina):
   - [Guia – Projeto de um Compilador](https://github.com/sergioaafreitas/COMP1)
@@ -43,7 +43,7 @@ O trabalho cobre **planejamento, projeto, implementação, testes e documentaç�
 | Líder | Integração, prazos, formulários P1/P2 |
 | Léxico | Flex / tokens da subset Python |
 | Sintaxe / AST | Bison, erros, árvore |
-| Semântica / codegen | Tabela de símbolos, IR, emissão JS |
+| Semântica / codegen | Tabela de símbolos, IR, emissão C |
 
 ---
 
@@ -67,7 +67,7 @@ O trabalho cobre **planejamento, projeto, implementação, testes e documentaç�
 
 **P1 — o que apresentar**
 
-- Definição do projeto (compilador Python → JS)
+- Definição do projeto (compilador Python → C)
 - Linguagem escolhida e subset
 - Planejamento das sprints
 - O que já foi implementado
@@ -98,18 +98,18 @@ O trabalho cobre **planejamento, projeto, implementação, testes e documentaç�
 
 ---
 
-## 4. Escopo técnico (subset Python → JavaScript)
+## 4. Escopo técnico (subconjunto Python → C)
 
 ### Incluído (meta do semestre)
 
-| Construção Python | Tradução JS típica |
+| Construção Python | Tradução C típica |
 | --- | --- |
 | Literais `int`, `float`, `str`, `bool` | number / string / boolean |
-| Atribuição e expressões | `let` / expressões JS |
+| Atribuição e expressões | declarações / expressões C |
 | `if` / `else` | `if` / `else` |
 | `while` | `while` |
-| `print(...)` | `console.log(...)` |
-| `def` / `return` (meta P2) | `function` / `return` |
+| `print(...)` | `printf(...)` |
+| `def` / `return` (meta P2) | função / `return` |
 
 ### Fora do escopo inicial
 
@@ -132,8 +132,8 @@ A subset pode crescer se a equipe tiver folga após o pipeline ponta a ponta est
 ### Até P2
 
 - [ ] Análise semântica básica integrada
-- [ ] Geração de JavaScript (direta ou via IR)
-- [ ] Exemplos `.py` → `.js` executáveis no Node.js
+- [ ] Geração de C (direta ou via IR)
+- [ ] Exemplos `.py` → `.c` compiláveis no GCC
 - [ ] Evolução clara em relação ao P1 documentada
 - [ ] Formulário P2 enviado
 
@@ -169,7 +169,7 @@ Aprovação: **NF ≥ 5,0** e **≥ 75%** de presença.
 
 ## 7. Recomendações da proposta (adotadas pela equipe)
 
-1. Projeto definido cedo → **compilador Python → JS**.
+1. Projeto definido cedo → **compilador Python → C**.
 2. Scrum + sprints documentadas neste site.
 3. Commits frequentes no GitHub.
 4. Uso dos guias e exemplos do repositório da disciplina.

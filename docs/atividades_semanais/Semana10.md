@@ -39,13 +39,13 @@ make
 make test
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-No nosso caso o “código final” é **JavaScript**, não bitcode Java. Use a semana 10 como modelo de:
+No nosso caso o “código final” é **C**, não bitcode Java. Use a semana 10 como modelo de:
 
 - [ ] Percorrer AST/IR e emitir instruções/código alvo
 - [ ] Organizar `tests/` com programas de entrada e saída esperada
-- [ ] Fechar o pipeline: `.py` → análise → (IR/opt) → `.js` → `node`
+- [ ] Fechar o pipeline: `.py` → análise → (IR/opt) → `.c` → `gcc`
 
 ## Observações da equipe
 

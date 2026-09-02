@@ -1,8 +1,8 @@
 # Guia Detalhado
 
-Roteiro de implementação do compilador **Python → JavaScript**, adaptado do [Guia – Projeto de um Compilador](https://github.com/sergioaafreitas/COMP1) da disciplina e da proposta de trabalho (PBL + Scrum).
+Roteiro de implementação do compilador **Python → C**, adaptado do [Guia – Projeto de um Compilador](https://github.com/sergioaafreitas/COMP1) da disciplina e da proposta de trabalho (PBL + Scrum).
 
-Equipe: **4 pessoas** · Ferramentas: **Flex + Bison** · Alvo: **JavaScript (Node.js)**
+Equipe: **4 pessoas** · Ferramentas: **Flex + Bison** · Alvo: **C (GCC)**
 
 ---
 
@@ -17,9 +17,9 @@ flowchart LR
     AST --> SEM[Análise semântica]
     SEM --> IR[Código intermediário]
     IR --> OPT[Otimizações\nopcional]
-    OPT --> GEN[Geração JS]
-    GEN --> JS[arquivo.js]
-    JS --> N[node]
+    OPT --> GEN[Geração C]
+    GEN --> C[arquivo.c]
+    C --> GCC[gcc]
 ```
 
 ---
@@ -30,7 +30,7 @@ flowchart LR
 
 - Descrever sintaxe e semântica da subset (ver [Especificação](Especificacao_do_projeto.md)).
 - Elaborar gramática livre de contexto (GLC) das construções escolhidas.
-- Fixar exemplos canônicos de entrada (`.py`) e saída esperada (`.js`).
+- Fixar exemplos canônicos de entrada (`.py`) e saída esperada (`.c`).
 
 ### 2. Análise léxica com Flex
 
@@ -58,7 +58,7 @@ flowchart LR
 
 - Definir IR simples (ex.: três endereços ou lista de instruções).
 - Percorrer a AST e emitir IR.
-- Manter a IR independente o bastante para facilitar o backend JS.
+- Manter a IR independente o bastante para facilitar o backend C.
 
 ### 6. Otimização (recomendado)
 
@@ -66,26 +66,26 @@ flowchart LR
 - Remoção de código morto trivial
 - Outras otimizações locais, se houver tempo
 
-### 7. Geração do código final (JavaScript)
+### 7. Geração do código final (C)
 
-- Traduzir IR (ou AST) para JavaScript:
-  - atribuições → `let` / atribuição;
-  - `print` → `console.log`;
-  - `def` → `function`;
+- Traduzir IR (ou AST) para C:
+  - atribuições → declarações e atribuições C;
+  - `print` → `printf`;
+  - `def` → funções C;
   - controle de fluxo → `if` / `while`.
-- Testar com `node saida.js`.
+- Testar compilando com `gcc saida.c -o saida`.
 
 ---
 
 ## Sugestão de sprints (guia da disciplina → nosso projeto)
 
-O guia oficial propõe 6 sprints. Abaixo, o mapeamento para **Python → JS** e para os marcos **P1 / P2 / T** (detalhamento de datas em [Planejamento das Sprints](../planejamento/planejamento_das_sprints.md)).
+O guia oficial propõe 6 sprints. Abaixo, o mapeamento para **Python → C** e para os marcos **P1 / P2 / T** (detalhamento de datas em [Planejamento das Sprints](../planejamento/planejamento_das_sprints.md)).
 
 ### Sprint 1 — Fundação
 
 | | |
 | --- | --- |
-| **Objetivos** | Formar equipe, ambiente Flex/Bison, definir subset Python → JS, rascunho da GLC |
+| **Objetivos** | Formar equipe, ambiente Flex/Bison, definir subconjunto Python → C, rascunho da GLC |
 | **Entregas** | Doc da linguagem; esboço `.l`/`.y`; hello Flex/Bison rodando |
 | **Tarefas** | Escopo; repo GitHub; tools; gramática inicial |
 
@@ -115,13 +115,13 @@ Adicionar o professor ao repositório quando solicitado na entrega final (acesso
 | **Entregas** | Semântica estável; gerador de IR; formulário P2; demo de evolução |
 | **Tarefas** | Refinar tipos/escopos; emitir IR; testes; apresentação P2 |
 
-### Sprint 5 — Otimização + geração JS + integração
+### Sprint 5 — Otimização + geração C + integração
 
 | | |
 | --- | --- |
-| **Objetivos** | Otimizações simples; codegen JavaScript; testes ponta a ponta |
-| **Entregas** | `.py` → `.js` rodando no Node; suíte de exemplos |
-| **Tarefas** | Folding/DCE; emissor JS; integração; correção de bugs |
+| **Objetivos** | Otimizações simples; codegen C; testes ponta a ponta |
+| **Entregas** | `.py` → `.c` compilado pelo GCC; suíte de exemplos |
+| **Tarefas** | Folding/DCE; emissor C; integração; correção de bugs |
 
 ### Sprint 6 — Entrevista final (T)
 
@@ -156,7 +156,7 @@ Adicionar o professor ao repositório quando solicitado na entrega final (acesso
 
 1. Usar as **quartas** para integração e transparência de tarefas.
 2. Review de sprint com demo curta.
-3. Testes por fase (léxico, sintático, semântico, JS).
+3. Testes por fase (léxico, sintático, semântico, C).
 4. Respeitar **datas dos formulários** P1/P2 — erro no envio zera a nota.
 5. Preparar-se para possível saída de integrante: não concentrar conhecimento.
 6. Deixar folga no cronograma para bugs e feriados.

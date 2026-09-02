@@ -24,7 +24,7 @@ make
 # erro:     3++2;
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
 - [ ] Definir estratégia de erro sintático para a subset (ex.: recuperar até nova linha / fim de bloco)
 - [ ] Eliminar conflitos shift/reduce com `%left` / `%right` quando necessário

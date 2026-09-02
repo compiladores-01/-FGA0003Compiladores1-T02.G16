@@ -34,7 +34,7 @@ make
 ./run_tests.sh
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
 - [ ] Regras semânticas da subset (uso antes de atribuição, tipos em `+`, etc.)
 - [ ] Criar pasta `tests/` com `.py` válidos e inválidos

@@ -1,6 +1,6 @@
 # Ferramentas
 
-Stack adotada para o compilador **Python → JavaScript** e para a documentação do projeto.
+Stack adotada para o compilador **Python → C** e para a documentação do projeto.
 
 ## Desenvolvimento do compilador
 
@@ -10,12 +10,12 @@ Stack adotada para o compilador **Python → JavaScript** e para a documentaçã
 | **Bison** | Análise sintática (gramática livre de contexto) e ações para AST |
 | **GCC / Clang** | Compilação do código C gerado por Flex/Bison |
 | **Make** (recomendado) | Automatizar `bison` → `flex` → `gcc` |
-| **Node.js** | Executar o JavaScript gerado e validar a saída |
+| **GCC** | Compilar o código C gerado e validar a saída |
 
 ### Pipeline alvo
 
 ```text
-arquivo.py  →  [Flex] tokens  →  [Bison] AST  →  semântica  →  gerador  →  arquivo.js  →  node
+arquivo.py  →  [Flex] tokens  →  [Bison] AST  →  semântica  →  gerador  →  arquivo.c  →  gcc
 ```
 
 ## Documentação e colaboração
@@ -47,17 +47,9 @@ python -m pip install -r docs/requirements.txt
 python -m mkdocs serve
 ```
 
-## Materiais de referência da disciplina
 
-| Recurso | Link |
-| --- | --- |
-| Repositório do professor | [github.com/sergioaafreitas/COMP1](https://github.com/sergioaafreitas/COMP1) |
-| Slides | [slides.cedis.tec.br/c/sergio-compiladores](https://slides.cedis.tec.br/c/sergio-compiladores) |
-| Formulário P1 | [forms.office.com/r/MyKh4HiAAu](https://forms.office.com/r/MyKh4HiAAu) |
-| Formulário P2 | [forms.office.com/r/gNG6Eb7e71](https://forms.office.com/r/gNG6Eb7e71) |
 
-## Bibliografia (plano de ensino)
-
+## Bibliografia 
 **Básica**
 
 - Tremblay & Sorenson — *Theory and Practice of Compiler Writing*

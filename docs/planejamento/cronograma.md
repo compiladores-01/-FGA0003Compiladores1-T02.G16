@@ -1,6 +1,6 @@
 # Cronograma
 
-Planejamento da equipe (4 integrantes) para o compilador **Python → JavaScript**, alinhado ao plano de ensino de **FGA0003 – Compiladores 1** (2026/2), turma **T02**.
+Planejamento da equipe (4 integrantes) para o compilador **Python → C**, alinhado ao plano de ensino de **FGA0003 – Compiladores 1** (2026/2), turma **T02**.
 
 !!! info "Datas-chave de avaliação"
     - **P1 (formulário):** até **23/09/2026, 23h59** — [forms.office.com/r/MyKh4HiAAu](https://forms.office.com/r/MyKh4HiAAu)
@@ -15,13 +15,13 @@ Encontros: **segundas e quartas, 16h–17h50**, sala **I10**.
 
 ## Visão geral do semestre
 
-| Fase | Período | Foco do projeto (Python → JS) | Marco |
+| Fase | Período | Foco do projeto (Python → C) | Marco |
 | --- | --- | --- | --- |
 | Fundação | 10/08 – 26/08 | Ambiente, escopo da subset Python, lexer | Scanner inicial |
 | Sintaxe | 31/08 – 16/09 | Parser, erros, AST e tabela de símbolos | Front-end estável |
 | **P1** | 23/09 – 30/09 | Consolidação e demonstração | Entrega P1 |
 | Semântica e IR | 05/10 – 14/10 | Análise semântica + IR | Pipeline intermediário |
-| Código e otimização | 19/10 – 28/10 | Otimizações + geração de JavaScript | Backend inicial |
+| Código e otimização | 19/10 – 28/10 | Otimizações + geração de C | Backend inicial |
 | **P2** | 04/11 – 11/11 | Integração e demonstração | Entrega P2 |
 | Fechamento | 16/11 – 25/11 | Polimento, testes, docs | Compilador final |
 | **T** | 30/11 – 02/12 | Entrevista de entrega | Nota C + T |
@@ -35,10 +35,10 @@ Encontros: **segundas e quartas, 16h–17h50**, sala **I10**.
 | Data | Aula (plano de ensino) | Entrega / meta da equipe |
 | --- | --- | --- |
 | 10/08 (seg.) | Apresentação da disciplina | Formação do grupo (4 pessoas), definição do líder |
-| 12/08 (qua.) | Avaliação diagnóstica | Confirmar subset Python → JS (ver escopo abaixo) |
+| 12/08 (qua.) | Avaliação diagnóstica | Confirmar subset Python → C (ver escopo abaixo) |
 | 17/08 (seg.) | Fundamentos de linguagens formais e autômatos | Modelar tokens da subset (números, ids, keywords, operadores) |
 | 19/08 (qua.) | Prática: analisadores léxicos (ERs) | Protótipo Flex com tokens básicos |
-| 24/08 (seg.) | Organização de compiladores/interpretadores | Pipeline: fonte Python → tokens → AST → JS |
+| 24/08 (seg.) | Organização de compiladores/interpretadores | Pipeline: fonte Python → tokens → AST → C |
 | 26/08 (qua.) | Prática: projeto inicial (fase léxica) | **Milestone M1:** lexer reconhecendo a subset v0 |
 
 ### Setembro — Parser, AST e P1
@@ -57,7 +57,7 @@ Encontros: **segundas e quartas, 16h–17h50**, sala **I10**.
 
 **Meta P1 (sugerida):** lexer + parser + AST (e início da tabela de símbolos) para um subconjunto Python mínimo, com documentação e demo reproduzível.
 
-### Outubro — Semântica, IR, otimização e JS
+### Outubro — Semântica, IR, otimização e C
 
 | Data | Aula (plano de ensino) | Entrega / meta da equipe |
 | --- | --- | --- |
@@ -67,8 +67,8 @@ Encontros: **segundas e quartas, 16h–17h50**, sala **I10**.
 | 14/10 (qua.) | Prática: IR intermediário | IR simples (ex.: três endereços / bytecode leve) |
 | 19/10 (seg.) | Otimização de código (teoria) | Escolher 1–2 otimizações viáveis |
 | 21/10 (qua.) | Prática: otimização | Constant folding / dead code (na IR) |
-| 26/10 (seg.) | Geração de código final (teoria) | Mapeamento IR → JavaScript |
-| 28/10 (qua.) | Prática: geração final | **Milestone M4:** protótipo emitindo `.js` |
+| 26/10 (seg.) | Geração de código final (teoria) | Mapeamento IR → C |
+| 28/10 (qua.) | Prática: geração final | **Milestone M4:** protótipo emitindo `.c` |
 
 ### Novembro / Dezembro — P2, fechamento e T
 
@@ -83,11 +83,11 @@ Encontros: **segundas e quartas, 16h–17h50**, sala **I10**.
 | 02/12 (qua.) | Entrevistas **T** | Entrega final |
 | 07–09/12 | Revisão de menção | Agendar com o professor se necessário |
 
-**Meta P2 (sugerida):** pipeline completo (léxico → sintático → semântico → geração JS), com exemplos executáveis no Node.js e documentação atualizada.
+**Meta P2 (sugerida):** pipeline completo (léxico → sintático → semântico → geração C), com exemplos compiláveis no GCC e documentação atualizada.
 
 ---
 
-## Escopo da linguagem (subset Python → JavaScript)
+## Escopo da linguagem (subconjunto Python → C)
 
 Versão inicial (v0) — realista para P1:
 
@@ -96,7 +96,7 @@ Versão inicial (v0) — realista para P1:
 - Expressões aritméticas e relacionais
 - `if` / `else`
 - `while`
-- `print(...)` → `console.log(...)`
+- `print(...)` → `printf(...)`
 - Funções simples (`def`) com parâmetros e `return` (se o tempo permitir até P1; senão até P2)
 
 Fora do escopo inicial (avaliar só se sobrar capacidade):

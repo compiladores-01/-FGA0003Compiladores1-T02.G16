@@ -24,9 +24,9 @@ make
 make test
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-- [ ] Aplicar constant folding na AST ou na IR antes de emitir JS
+- [ ] Aplicar constant folding na AST ou na IR antes de emitir C
 - [ ] (Opcional) dead code elimination trivial
 - [ ] Documentar a otimização em Decisões Técnicas / Problemas e Soluções
 

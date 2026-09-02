@@ -28,11 +28,11 @@ make
 # ou: ./parser  (entrada manual)
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-- [ ] Estudar ERs para ids, números, strings e operadores Python
-- [ ] Esboçar tokens da subset no `lexer.l` do projeto
-- [ ] Reaproveitar o padrão de Makefile da semana 02
+- [x]Estudar ERs para ids, números, strings e operadores Python
+- [x]Esboçar tokens da subset no `lexer.l` do projeto
+- [x]Reaproveitar o padrão de Makefile da semana 02
 
 ## Observações da equipe
 

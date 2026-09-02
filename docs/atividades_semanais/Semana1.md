@@ -32,12 +32,12 @@ gcc -o hello hello.tab.c lex.yy.c -lfl
 ./hello
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-- [ ] Ambiente Flex/Bison configurado (WSL ou MSYS2)
-- [ ] Hello World compilando
-- [ ] Ler a proposta de trabalho e o guia de compilador
-- [ ] Confirmar subset Python → JavaScript da equipe
+- [x] Ambiente Flex/Bison configurado (WSL ou MSYS2)
+- [x] Hello World compilando
+- [x] Ler a proposta de trabalho e o guia de compilador
+- [x] Confirmar subconjunto Python → C da equipe
 
 ## Observações da equipe
 

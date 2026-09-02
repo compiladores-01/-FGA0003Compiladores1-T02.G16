@@ -4,6 +4,6 @@ _Status e evidências da primeira entrega intermediária._
 
 ## Checklist
 
-- [ ] Documentação atualizada
+- [x] Documentação atualizada
 - [ ] Código compilando
 - [ ] Demonstração preparada

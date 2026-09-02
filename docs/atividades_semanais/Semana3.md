@@ -27,11 +27,11 @@ gcc -o scanner lex.yy.c -lfl
 ./scanner
 ```
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-- [ ] Adaptar o scanner para keywords Python (`def`, `return`, `print`, `True`, `False`, `else`, …)
-- [ ] Tratar comentários `#` do Python
-- [ ] Emitir tokens que o Bison do projeto vai consumir (não só `printf`)
+- [x] Adaptar o scanner para keywords Python (`def`, `return`, `print`, `True`, `False`, `else`, …)
+- [x]Tratar comentários `#` do Python
+- [x]Emitir tokens que o Bison do projeto vai consumir (não só `printf`)
 
 ## Observações da equipe
 

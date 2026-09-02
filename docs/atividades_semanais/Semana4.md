@@ -26,11 +26,11 @@ echo "3+4*2" | ./parser
 - Entrada válida: o exemplo mínimo encerra em silêncio (sucesso).
 - Entrada inválida: mensagem de erro sintático.
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
-- [ ] Criar `parser.y` da subset (atribuição, expressões, depois `if`/`while`)
-- [ ] Definir precedência dos operadores Python que forem suportados
-- [ ] Integrar lexer + parser no Makefile do repositório da equipe
+- [x] Criar `parser.y` da subset (atribuição, expressões, depois `if`/`while`)
+- [x]Definir precedência dos operadores Python que forem suportados
+- [x]Integrar lexer + parser no Makefile do repositório da equipe
 
 ## Observações da equipe
 

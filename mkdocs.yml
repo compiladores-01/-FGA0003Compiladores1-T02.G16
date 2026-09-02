@@ -1,6 +1,6 @@
-﻿site_name: COMP1
+﻿site_name: compiladores 01
 site_description: Documentação do projeto de Compiladores 1 — Universidade de Brasília
-site_author: Equipe COMP1 · UnB
+site_author: Compiladores 01 · UnB
 site_url: https://fernandavazgit1.github.io/-FGA0003Compiladores1-T02.G16/
 repo_name: Fernandavazgit1/-FGA0003Compiladores1-T02.G16
 repo_url: https://github.com/Fernandavazgit1/-FGA0003Compiladores1-T02.G16
@@ -44,9 +44,9 @@ nav:
       - Metodologia: planejamento/metodologia.md
       - Ferramentas: planejamento/ferramentas.md
       - Planejamento das Sprints: planejamento/planejamento_das_sprints.md
-  - Projeto Final:
-      - Guia Detalhado: Projeto_Final/Guia_detalhado.md
-      - Especificação do Projeto: Projeto_Final/Especificacao_do_projeto.md
+  # - Projeto Final:
+  #     - Guia Detalhado: Projeto_Final/Guia_detalhado.md
+  #     - Especificação do Projeto: Projeto_Final/Especificacao_do_projeto.md
   - Decisões Técnicas: decisoes/decisao.md
   - Problemas e Soluções:
       - Problemas e Soluções 1: problemas_e_solucoes/problemas_e_solucoes1.md
@@ -58,7 +58,17 @@ nav:
       - Ata 4: atas/ata4.md
       - Ata 5: atas/ata5.md
   - Sprints:
-      - Sprint: sprints/sprint.md
+      - Visão Geral: sprints/sprint.md
+      - Sprint 0: sprints/sprint-00.md
+      - Sprint 1: sprints/sprint-01.md
+      - Sprint 2: sprints/sprint-02.md
+      - Sprint 3: sprints/sprint-03.md
+    #  - Sprint 4: sprints/sprint-04.md
+      #- Sprint 5: sprints/sprint-05.md
+      #- Sprint 6: sprints/sprint-06.md
+     # - Sprint 7: sprints/sprint-07.md
+     # - Sprint 8: sprints/sprint-08.md
+      #- Sprint 9: sprints/sprint-09.md
   - Atividades Semanais:
       - Semana 1: atividades_semanais/Semana1.md
       - Semana 2: atividades_semanais/Semana2.md

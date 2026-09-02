@@ -1,63 +1,42 @@
-# Sobre
+# Sobre o Projeto
 
-Documentação do projeto **COMP1** — compilador **Python → JavaScript** desenvolvido na disciplina **FGA0003 – Compiladores 1** (2026/2).
+Bem-vindo(a) à documentação do compilador **Python → C**, desenvolvido como projeto prático para a disciplina **FGA0003 – Compiladores 1** (2026/2).
 
-| | |
-| --- | --- |
-| **Curso** | Engenharia de Software |
+Esta disciplina aborda os princípios da construção de compiladores e como as linguagens de programação são processadas pela máquina. Como aplicação prática de aprendizado, nossa equipe está construindo um tradutor de código Python para C, estruturado com o apoio das ferramentas Flex e Bison.
+
+##  Informações Gerais
+
+| Atributo | Detalhes |
+| :--- | :--- |
+| **Curso** | Engenharia de Software (FCTE - UnB) |
 | **Turma** | T02 |
-| **Carga horária** | 60 horas |
+| **Carga Horária** | 60 horas |
 | **Professor** | Dr. Sergio Antônio Andrade de Freitas ([sergiofreitas@unb.br](mailto:sergiofreitas@unb.br)) |
-| **Equipe** | 4 integrantes |
-| **Alvo** | Traduzir um subconjunto de Python para JavaScript (Flex + Bison) |
+| **Equipe** | 3 integrantes |
+| **Alvo do Projeto** | Traduzir um subconjunto de Python para C (Flex + Bison) |
 
+---
 
-## Introdução
+##  Membros da Equipe
 
-O projeto integra teoria e prática (PBL): a cada semana a equipe avança uma fase do compilador — análise léxica, sintática, semântica e geração de código — até obter um tradutor funcional de uma **subset Python** para **JavaScript** executável no Node.js.
+| Nome | Matrícula | 
+| :--- | :--- | 
+| **Fernanda Vaz** | 221007715 |
+| **Manoel Castro** | 200023535 |
+| **Cauã Clemente** | 222006623 |  
 
-## Membros da Equipe
+---
 
-| Nome | Matrícula |
-|  --- | --- | 
-|**Fernanda Vaz** |  **221007715**|
-|**Manoel Castro**| **200023535**|
-|**Caua Clemente**|  **222006623**|
-| | |
-| | |
+##  Estrutura do Repositório
 
-
-## Estrutura do Repositório
+A organização do nosso código-fonte e da documentação segue a estrutura abaixo:
 
 ```text
 .
-├── lexer/          # Flex — análise léxica
-├── parser/         # Bison — análise sintática
+├── lexer/          
+├── parser/       
 ├── src/            # Integração / codegen (em evolução)
-├── docs/           # Documentação MkDocs
-└── mkdocs.yml
-```
+├── docs/           # Arquivos de documentação (MkDocs)
+└── mkdocs.yml      # Configuração do MkDocs ```
 
-## Como Executar
-
-```bash
-# dependências (WSL/Ubuntu)
-sudo apt-get install flex bison build-essential
-
-# gerar e compilar (ajustar conforme o Makefile do repositório)
-bison -d parser/parser.y -o parser.tab.c
-flex -o lex.yy.c lexer/lexer.l
-gcc parser.tab.c lex.yy.c -o compilador
-
-# documentação
-python -m pip install -r docs/requirements.txt
-python -m mkdocs serve
-```
-
-
-## Links úteis
-
-- Material do professor: [sergioaafreitas/COMP1](https://github.com/sergioaafreitas/COMP1)
-- Slides: [slides.cedis.tec.br/c/sergio-compiladores](https://slides.cedis.tec.br/c/sergio-compiladores)
-- Formulário **P1** (até 23/09/2026 23h59): [forms.office.com/r/MyKh4HiAAu](https://forms.office.com/r/MyKh4HiAAu)
-- Formulário **P2** (até 04/11/2026 23h59): [forms.office.com/r/gNG6Eb7e71](https://forms.office.com/r/gNG6Eb7e71)
+---

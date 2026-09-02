@@ -28,11 +28,11 @@ make
 
 Saída esperada (exemplo do README): dump da AST e símbolos (`a`, `b`, …).
 
-## Relação com o nosso projeto (Python → JS)
+## Relação com o nosso projeto (Python → C)
 
 - [ ] Definir nós da AST para stmts Python (assign, if, while, call, …)
 - [ ] Popular tabela de símbolos nas atribuições / `def`
-- [ ] Usar a AST como base da semântica e do codegen JS
+- [ ] Usar a AST como base da semântica e do codegen C
 
 !!! tip "Marco P1"
     Esta semana alinha bem com a meta de P1: lexer + parser + AST (+ início da tabela).
