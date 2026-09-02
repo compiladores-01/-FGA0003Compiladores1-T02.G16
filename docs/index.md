@@ -1,4 +1,4 @@
-# Sobre o Projeto
+# Sobre o Projeto do compilador
 
 Bem-vindo(a) à documentação do compilador **Python → C**, desenvolvido como projeto prático para a disciplina **FGA0003 – Compiladores 1** (2026/2).
 
