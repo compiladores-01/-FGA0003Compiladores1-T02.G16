@@ -6,18 +6,23 @@ int yylex(void);
 void yyerror(const char *s);
 %}
 
-%token NUM PLUS MINUS TIMES DIVIDE LPAREN RPAREN
+%token IDENTIFIER ATRIBUES NUMBER FLOAT STRING BOOLEAN
+%token PRINT IF ELSE WHILE COLON
+%token LPAREN RPAREN
 
 %%
+program:
+    command;
 
-expressao:
-	     expressao PLUS expressao
-  | expressao MINUS expressao
-  | expressao TIMES expressao
-  | expressao DIVIDE expressao
-  | LPAREN expressao RPAREN
-  | NUM
-  ;
+command:
+    variable |
+    PRINT LPAREN value RPAREN;
+
+variable:
+    IDENTIFIER ATRIBUES value;
+
+value:
+    NUMBER | FLOAT | STRING | BOOLEAN;
 
 %%
 
