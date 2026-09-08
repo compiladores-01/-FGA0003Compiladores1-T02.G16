@@ -6,7 +6,14 @@ int yylex(void);
 void yyerror(const char *s);
 %}
 
-%token NUM PLUS MINUS TIMES DIVIDE LPAREN RPAREN
+%union {
+    int ival;
+    char *sval;
+}
+
+%token <ival> NUM
+%token <sval> STRING
+%token PLUS MINUS TIMES DIVIDE LPAREN RPAREN
 
 %%
 
@@ -25,7 +32,12 @@ void yyerror(const char *s) {
     fprintf(stderr, "Erro sintático: %s\n", s);
 }
 
+/* Comentado temporariamente pra testar só o Lexer.
+   Reativar quando o Parser estiver pronto para rodar o compilador completo. */
+/*
+
 int main(void) {
     yyparse();
     return 0;
 }
+*/
