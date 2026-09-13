@@ -9,6 +9,7 @@ void yyerror(const char *s);
 %token IDENTIFIER ATRIBUES NUMBER FLOAT STRING BOOLEAN
 %token PRINT IF ELSE WHILE COLON
 %token LPAREN RPAREN
+%token PLUS MINUS TIMES DIVIDE
 
 %%
 program:
