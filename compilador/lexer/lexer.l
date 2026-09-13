@@ -4,6 +4,8 @@
 #include <string.h>
 %}
 
+%option yylineno
+
 %%
 "print"     { return PRINT; }
 "("     { return LPAREN; }
@@ -21,7 +23,17 @@
 "="             {return ATRIBUES;}
 [0-9]+          { yylval = atoi(yytext); return NUMBER; }
 [0-9]+\.[0-9]+       { return FLOAT; }
-\"[^\"]*\"            { return STRING; }
+\"(\\.|[^\"\\\n])*\"    { return STRING; }
+
+\'(\\.|[^\'\\\n])*\'    { return STRING; }
+
+\"(\\.|[^\"\\\n])*    { 
+    fprintf(stderr, "Erro léxico: string não terminada na linha %d\n", yylineno); 
+}
+
+\'(\\.|[^\'\\\n])*    { 
+    fprintf(stderr, "Erro léxico: string não terminada na linha %d\n", yylineno); 
+}
 
 
 
