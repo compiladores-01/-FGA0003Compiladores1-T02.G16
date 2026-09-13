@@ -1,0 +1,13 @@
+# Arquivos gerados pelo Flex/Bison
+lex.yy.c
+parser.tab.c
+parser.tab.h
+compilador/lex.yy.c
+compilador/parser.tab.c
+compilador/parser.tab.h
+compilador/compilador
+
+# Binários e temporários
+test_lexer*
+*.o
+*.exe

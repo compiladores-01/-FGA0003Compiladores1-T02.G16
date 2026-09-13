@@ -12,6 +12,7 @@
 "else"      { return ELSE; }
 "while"     { return WHILE; }
 ":"         { return COLON; }
+","         { return COMMA; }
 
 [a-zA-Z_][a-zA-Z0-9_]* {
     if (strcmp(yytext, "true") == 0 || strcmp(yytext, "false") == 0)
