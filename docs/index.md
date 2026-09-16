@@ -27,16 +27,5 @@ Esta disciplina aborda os princípios da construção de compiladores e como as 
 
 ---
 
-##  Estrutura do Repositório
-
-A organização do nosso código-fonte e da documentação segue a estrutura abaixo:
-
-```text
-.
-├── lexer/          
-├── parser/       
-├── src/            # Integração / codegen (em evolução)
-├── docs/           # Arquivos de documentação (MkDocs)
-└── mkdocs.yml      # Configuração do MkDocs ```
 
 ---
