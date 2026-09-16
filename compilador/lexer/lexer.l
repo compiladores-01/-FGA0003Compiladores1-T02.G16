@@ -26,6 +26,7 @@
 [0-9]+          { yylval = atoi(yytext); return NUMBER; }
 [0-9]+\.[0-9]+       { return FLOAT; }
 \"[^\"]*\"            { return STRING; }
+#.*             { /* Ignorar comentário */ }
 
 
 
