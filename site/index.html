@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sobre" class="md-skip">
+        <a href="#sobre-o-projeto" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -528,9 +528,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
+  <a href="#informacoes-gerais" class="md-nav__link">
     <span class="md-ellipsis">
-      Introdução
+      Informações Gerais
     </span>
   </a>
   
@@ -551,30 +551,6 @@
       Estrutura do Repositório
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-executar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como Executar
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Como Executar">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instalar-dependencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalar dependências
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1575,9 +1551,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
+  <a href="#informacoes-gerais" class="md-nav__link">
     <span class="md-ellipsis">
-      Introdução
+      Informações Gerais
     </span>
   </a>
   
@@ -1601,30 +1577,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#como-executar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como Executar
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Como Executar">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instalar-dependencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalar dependências
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1644,124 +1596,79 @@
   
 
 
-<h1 id="sobre">Sobre<a class="headerlink" href="#sobre" title="Permanent link">&para;</a></h1>
-<p>Documentação do projeto <strong>COMP1</strong> — compilador <strong>Python → C</strong> desenvolvido na disciplina <strong>FGA0003 – Compiladores 1</strong> (2026/2).</p>
+<h1 id="sobre-o-projeto">Sobre o Projeto<a class="headerlink" href="#sobre-o-projeto" title="Permanent link">&para;</a></h1>
+<p>Bem-vindo(a) à documentação do compilador <strong>Python → C</strong>, desenvolvido como projeto prático para a disciplina <strong>FGA0003 – Compiladores 1</strong> (2026/2).</p>
+<p>Esta disciplina aborda os princípios da construção de compiladores e como as linguagens de programação são processadas pela máquina. Como aplicação prática de aprendizado, nossa equipe está construindo um tradutor de código Python para C, estruturado com o apoio das ferramentas Flex e Bison.</p>
+<h2 id="informacoes-gerais">Informações Gerais<a class="headerlink" href="#informacoes-gerais" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th style="text-align: left;">Atributo</th>
+<th style="text-align: left;">Detalhes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Curso</strong></td>
-<td>Engenharia de Software</td>
+<td style="text-align: left;"><strong>Curso</strong></td>
+<td style="text-align: left;">Engenharia de Software (FCTE - UnB)</td>
 </tr>
 <tr>
-<td><strong>Turma</strong></td>
-<td>T02</td>
+<td style="text-align: left;"><strong>Turma</strong></td>
+<td style="text-align: left;">T02</td>
 </tr>
 <tr>
-<td><strong>Carga horária</strong></td>
-<td>60 horas</td>
+<td style="text-align: left;"><strong>Carga Horária</strong></td>
+<td style="text-align: left;">60 horas</td>
 </tr>
 <tr>
-<td><strong>Professor</strong></td>
-<td>Dr. Sergio Antônio Andrade de Freitas (<a href="mailto:sergiofreitas@unb.br">sergiofreitas@unb.br</a>)</td>
+<td style="text-align: left;"><strong>Professor</strong></td>
+<td style="text-align: left;">Dr. Sergio Antônio Andrade de Freitas (<a href="mailto:sergiofreitas@unb.br">sergiofreitas@unb.br</a>)</td>
 </tr>
 <tr>
-<td><strong>Equipe</strong></td>
-<td>4 integrantes</td>
+<td style="text-align: left;"><strong>Equipe</strong></td>
+<td style="text-align: left;">3 integrantes</td>
 </tr>
 <tr>
-<td><strong>Alvo</strong></td>
-<td>Traduzir um subconjunto de Python para C (Flex + Bison)</td>
+<td style="text-align: left;"><strong>Alvo do Projeto</strong></td>
+<td style="text-align: left;">Traduzir um subconjunto de Python para C (Flex + Bison)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
-<p>O projeto integra teoria e prática (PBL): a cada semana a equipe avança uma fase do compilador — análise léxica, sintática, semântica e geração de código — até obter um tradutor funcional de um subconjunto de Python para <strong>C</strong> compilável com GCC.</p>
+<hr />
 <h2 id="membros-da-equipe">Membros da Equipe<a class="headerlink" href="#membros-da-equipe" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Nome</th>
-<th>Matrícula</th>
+<th style="text-align: left;">Nome</th>
+<th style="text-align: left;">Matrícula</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fernanda Vaz</strong></td>
-<td><strong>221007715</strong></td>
+<td style="text-align: left;"><strong>Fernanda Vaz</strong></td>
+<td style="text-align: left;">221007715</td>
 </tr>
 <tr>
-<td><strong>Manoel Castro</strong></td>
-<td><strong>200023535</strong></td>
+<td style="text-align: left;"><strong>Manoel Castro</strong></td>
+<td style="text-align: left;">200023535</td>
 </tr>
 <tr>
-<td><strong>Caua Clemente</strong></td>
-<td><strong>222006623</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td style="text-align: left;"><strong>Cauã Clemente</strong></td>
+<td style="text-align: left;">222006623</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="estrutura-do-repositorio">Estrutura do Repositório<a class="headerlink" href="#estrutura-do-repositorio" title="Permanent link">&para;</a></h2>
+<p>A organização do nosso código-fonte e da documentação segue a estrutura abaixo:</p>
 <p><code>text
 .
-├── lexer/          # Flex — análise léxica
-├── parser/         # Bison — análise sintática
+├── lexer/          
+├── parser/       
 ├── src/            # Integração / codegen (em evolução)
-├── docs/           # Documentação MkDocs
-└── mkdocs.yml</code></p>
-<h2 id="como-executar">Como Executar<a class="headerlink" href="#como-executar" title="Permanent link">&para;</a></h2>
-<h3 id="instalar-dependencias">Instalar dependências<a class="headerlink" href="#instalar-dependencias" title="Permanent link">&para;</a></h3>
-<p>No Linux ou WSL com Ubuntu, execute:</p>
-<p>```bash</p>
-<h1 id="1-atualizar-a-lista-de-pacotes">1. Atualizar a lista de pacotes<a class="headerlink" href="#1-atualizar-a-lista-de-pacotes" title="Permanent link">&para;</a></h1>
-<p>sudo apt-get update</p>
-<h1 id="2-instalar-gcc">2. Instalar GCC<a class="headerlink" href="#2-instalar-gcc" title="Permanent link">&para;</a></h1>
-<p>sudo apt-get install gcc</p>
-<h1 id="3-instalar-flex">3. Instalar Flex<a class="headerlink" href="#3-instalar-flex" title="Permanent link">&para;</a></h1>
-<p>sudo apt-get install flex</p>
-<h1 id="4-instalar-bison">4. Instalar Bison<a class="headerlink" href="#4-instalar-bison" title="Permanent link">&para;</a></h1>
-<p>sudo apt-get install bison</p>
-<h1 id="5-instalar-make">5. Instalar Make<a class="headerlink" href="#5-instalar-make" title="Permanent link">&para;</a></h1>
-<p>sudo apt-get install make
-```</p>
-<p>Também é possível instalar tudo em um único comando:</p>
-<p><code>bash
-sudo apt-get update
-sudo apt-get install gcc flex bison make</code></p>
-<p>Para conferir se a instalação foi concluída:</p>
-<p><code>bash
-gcc --version
-flex --version
-bison --version
-make --version</code></p>
-<h3 id="gerar-e-compilar">Gerar e compilar<a class="headerlink" href="#gerar-e-compilar" title="Permanent link">&para;</a></h3>
-<p><code>bash
-bison -d parser/parser.y -o parser.tab.c
-flex -o lex.yy.c lexer/lexer.l
-gcc parser.tab.c lex.yy.c -o compilador</code></p>
-<h3 id="rodar-a-documentacao-localmente">Rodar a documentação localmente<a class="headerlink" href="#rodar-a-documentacao-localmente" title="Permanent link">&para;</a></h3>
-<p><code>bash
-python -m pip install -r docs/requirements.txt
-python -m mkdocs serve</code></p>
-<h2 id="links-uteis">Links úteis<a class="headerlink" href="#links-uteis" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Material do professor: <a href="https://github.com/sergioaafreitas/COMP1">sergioaafreitas/COMP1</a></li>
-<li>Slides: <a href="https://slides.cedis.tec.br/c/sergio-compiladores">slides.cedis.tec.br/c/sergio-compiladores</a></li>
-<li>Formulário <strong>P1</strong> (até 23/09/2026 23h59): <a href="https://forms.office.com/r/MyKh4HiAAu">forms.office.com/r/MyKh4HiAAu</a></li>
-<li>Formulário <strong>P2</strong> (até 04/11/2026 23h59): <a href="https://forms.office.com/r/gNG6Eb7e71">forms.office.com/r/gNG6Eb7e71</a></li>
-</ul>
+├── docs/           # Arquivos de documentação (MkDocs)
+└── mkdocs.yml      # Configuração do MkDocs</code></p>
+<hr />
 
 
 

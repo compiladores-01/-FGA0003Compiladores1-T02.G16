@@ -633,18 +633,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ciclo-pbl-da-equipe" class="md-nav__link">
+  <a href="#organizacao-do-grupo" class="md-nav__link">
     <span class="md-ellipsis">
-      Ciclo PBL da equipe
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organizacao-do-grupo-4-pessoas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organização do grupo (4 pessoas)
+      Organização do grupo
     </span>
   </a>
   
@@ -663,15 +654,6 @@
   <a href="#criterios-internos-de-qualidade" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios internos de qualidade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#taxonomia-de-bloom-alinhamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Taxonomia de Bloom (alinhamento)
     </span>
   </a>
   
@@ -1589,18 +1571,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ciclo-pbl-da-equipe" class="md-nav__link">
+  <a href="#organizacao-do-grupo" class="md-nav__link">
     <span class="md-ellipsis">
-      Ciclo PBL da equipe
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organizacao-do-grupo-4-pessoas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organização do grupo (4 pessoas)
+      Organização do grupo
     </span>
   </a>
   
@@ -1619,15 +1592,6 @@
   <a href="#criterios-internos-de-qualidade" class="md-nav__link">
     <span class="md-ellipsis">
       Critérios internos de qualidade
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#taxonomia-de-bloom-alinhamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Taxonomia de Bloom (alinhamento)
     </span>
   </a>
   
@@ -1677,24 +1641,8 @@
 </tbody>
 </table>
 <p>Material de apoio do professor: <a href="https://slides.cedis.tec.br/c/sergio-compiladores">slides CEDIS</a> · repositório de referência: <a href="https://github.com/sergioaafreitas/COMP1">sergioaafreitas/COMP1</a>.</p>
-<h2 id="ciclo-pbl-da-equipe">Ciclo PBL da equipe<a class="headerlink" href="#ciclo-pbl-da-equipe" title="Permanent link">&para;</a></h2>
-<p><code>mermaid
-flowchart LR
-    A[Problema da sprint] --&gt; B[Planejar]
-    B --&gt; C[Implementar]
-    C --&gt; D[Testar]
-    D --&gt; E[Documentar]
-    E --&gt; F[Demo / feedback]
-    F --&gt; A</code></p>
-<ol>
-<li><strong>Problema:</strong> o que falta no pipeline Python → C nesta sprint.</li>
-<li><strong>Planejar:</strong> quebrar em tarefas para 4 pessoas (ver papéis).</li>
-<li><strong>Implementar:</strong> Flex/Bison/C, commits pequenos e revisáveis.</li>
-<li><strong>Testar:</strong> casos <code>.py</code> de entrada e saída <code>.c</code> esperada.</li>
-<li><strong>Documentar:</strong> atualizar atas, decisões, problemas/soluções e o site MkDocs.</li>
-<li><strong>Demo:</strong> mostrar avanço em aula ou na reunião semanal do grupo.</li>
-</ol>
-<h2 id="organizacao-do-grupo-4-pessoas">Organização do grupo (4 pessoas)<a class="headerlink" href="#organizacao-do-grupo-4-pessoas" title="Permanent link">&para;</a></h2>
+<p>```</p>
+<h2 id="organizacao-do-grupo">Organização do grupo<a class="headerlink" href="#organizacao-do-grupo" title="Permanent link">&para;</a></h2>
 <p>Papéis <strong>fixos</strong> (podem rotacionar a cada sprint, mas cada um mantém uma frente principal):</p>
 <table>
 <thead>
@@ -1727,12 +1675,6 @@ flowchart LR
 </tr>
 </tbody>
 </table>
-<p>Boas práticas:</p>
-<ul>
-<li>Ninguém concentra sozinho uma fase crítica perto de P1/P2/T.</li>
-<li>Pair programming nas quartas para transferência de conhecimento (a entrevista pode sortear qualquer membro).</li>
-<li>Decisões relevantes vão para <a href="../../decisoes/decisao/">Decisões Técnicas</a>.</li>
-</ul>
 <h2 id="ritmo-semanal-sugerido">Ritmo semanal sugerido<a class="headerlink" href="#ritmo-semanal-sugerido" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1767,29 +1709,6 @@ flowchart LR
 <li>Exemplos de entrada (<code>.py</code>) e saída (<code>.c</code>) versionados.</li>
 <li>Site MkDocs refletindo o estado real do projeto.</li>
 </ul>
-<h2 id="taxonomia-de-bloom-alinhamento">Taxonomia de Bloom (alinhamento)<a class="headerlink" href="#taxonomia-de-bloom-alinhamento" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Nível</th>
-<th>Como aparece no projeto</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Aplicação</td>
-<td>Usar Flex/Bison para implementar fases do compilador</td>
-</tr>
-<tr>
-<td>Análise</td>
-<td>Diagnosticar erros léxicos/sintáticos/semânticos e trade-offs de design</td>
-</tr>
-<tr>
-<td>Criação</td>
-<td>Projetar o subconjunto e o gerador Python → C funcional</td>
-</tr>
-</tbody>
-</table>
 
 
 
