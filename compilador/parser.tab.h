@@ -65,8 +65,22 @@ extern int yydebug;
     ELSE = 266,                    /* ELSE  */
     WHILE = 267,                   /* WHILE  */
     COLON = 268,                   /* COLON  */
-    LPAREN = 269,                  /* LPAREN  */
-    RPAREN = 270                   /* RPAREN  */
+    NEWLINE = 269,                 /* NEWLINE  */
+    LPAREN = 270,                  /* LPAREN  */
+    RPAREN = 271,                  /* RPAREN  */
+    LBRACE = 272,                  /* LBRACE  */
+    RBRACE = 273,                  /* RBRACE  */
+    PLUS = 274,                    /* PLUS  */
+    MINUS = 275,                   /* MINUS  */
+    TIMES = 276,                   /* TIMES  */
+    DIVIDE = 277,                  /* DIVIDE  */
+    EQ = 278,                      /* EQ  */
+    NEQ = 279,                     /* NEQ  */
+    LEQ = 280,                     /* LEQ  */
+    GEQ = 281,                     /* GEQ  */
+    LT = 282,                      /* LT  */
+    GT = 283,                      /* GT  */
+    LOWER_THAN_ELSE = 284          /* LOWER_THAN_ELSE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
